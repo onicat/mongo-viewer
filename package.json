@@ -1,0 +1,24 @@
+{
+  "name": "mongo-viewer",
+  "version": "0.0.1",
+  "description": "",
+  "scripts": {
+    "install-all": "npm i & gulp install-all",
+    "dev": "gulp run-dev",
+    "build": "gulp run-build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/onicat/mongo-viewer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/onicat/mongo-viewer/issues"
+  },
+  "homepage": "https://github.com/onicat/mongo-viewer#readme",
+  "devDependencies": {
+    "concurrently": "6.2.0",
+    "gulp": "4.0.2"
+  }
+}
