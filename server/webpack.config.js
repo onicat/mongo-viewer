@@ -6,7 +6,7 @@ module.exports = {
   mode: "production",
   output: {
     path: path.resolve(__dirname, "../dist/server/"),
-    filename: "bundle.js",
+    filename: "index.js",
     clean: true
   },
   module: {

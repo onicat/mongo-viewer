@@ -1,4 +1,6 @@
 const { app, BrowserWindow } = require('electron');
+const { fork } = require("child_process");
+const path = require('path');
 const { NODE_ENV } = process.env;
 
 function createWindow () {
@@ -14,6 +16,15 @@ function createWindow () {
   }
 }
 
+function createServerProcess() {
+  if (NODE_ENV === 'development') {
+    return;
+  }
+
+  fork(path.join(__dirname, 'server/index.js'), []);
+}
+
 app.whenReady().then(() => {
-  createWindow()
+  createServerProcess();
+  createWindow();
 });
